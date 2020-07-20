@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25u-qr-esc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="25u-qr-esc">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -10,13 +10,13 @@
         <!--Notas Diarias-->
         <scene sceneID="D3A-Ax-4J7">
             <objects>
-                <tableViewController id="pub-qg-YU9" sceneMemberID="viewController">
+                <tableViewController id="pub-qg-YU9" customClass="ListarAnotacoesTableViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="2dS-vv-0SQ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="0MF-5N-mCW">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="0MF-5N-mCW">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0MF-5N-mCW" id="Gzq-ZH-eKR">
@@ -34,7 +34,7 @@
                         <barButtonItem key="backBarButtonItem" title="Voltar" id="C2O-mC-CQa"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="oJs-F3-0Vu">
                             <connections>
-                                <segue destination="xrP-5M-2Wj" kind="show" id="JeL-fw-flS"/>
+                                <segue destination="xrP-5M-2Wj" kind="show" identifier="verAnotacao" id="JeL-fw-flS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -46,7 +46,7 @@
         <!--Adicione seu Texto-->
         <scene sceneID="6Lm-7f-giJ">
             <objects>
-                <viewController id="xrP-5M-2Wj" sceneMemberID="viewController">
+                <viewController id="xrP-5M-2Wj" customClass="AnotacoesViewController" customModule="Notas_Diarias" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ff9-4W-8nu">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -69,8 +69,15 @@
                         <viewLayoutGuide key="safeArea" id="8UW-kc-AOZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Adicione seu Texto" id="F7W-6l-zy9">
-                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="UOT-D3-GQp"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="UOT-D3-GQp">
+                            <connections>
+                                <action selector="salvar:" destination="xrP-5M-2Wj" id="rhV-H9-oIi"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="texto" destination="bcE-Dq-YVi" id="qHW-kX-YXh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d4R-oN-b0V" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

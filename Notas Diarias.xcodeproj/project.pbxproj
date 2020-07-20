@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		6E0FEBE824BF97160057CEE7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FEBE724BF97160057CEE7 /* AppDelegate.swift */; };
 		6E0FEBEA24BF97160057CEE7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FEBE924BF97160057CEE7 /* SceneDelegate.swift */; };
-		6E0FEBEC24BF97160057CEE7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FEBEB24BF97160057CEE7 /* ViewController.swift */; };
 		6E0FEBEF24BF97160057CEE7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FEBED24BF97160057CEE7 /* Main.storyboard */; };
 		6E0FEBF224BF97160057CEE7 /* Notas_Diarias.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6E0FEBF024BF97160057CEE7 /* Notas_Diarias.xcdatamodeld */; };
 		6E0FEBF424BF97170057CEE7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FEBF324BF97170057CEE7 /* Assets.xcassets */; };
 		6E0FEBF724BF97170057CEE7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6E0FEBF524BF97170057CEE7 /* LaunchScreen.storyboard */; };
+		6E5405A824C20FBB005E4774 /* ListarAnotacoesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5405A724C20FBB005E4774 /* ListarAnotacoesTableViewController.swift */; };
+		6E5405AA24C21030005E4774 /* AnotacoesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E5405A924C21030005E4774 /* AnotacoesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6E0FEBE424BF97160057CEE7 /* Notas Diarias.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Notas Diarias.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6E0FEBE724BF97160057CEE7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6E0FEBE924BF97160057CEE7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6E0FEBEB24BF97160057CEE7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6E0FEBEE24BF97160057CEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6E0FEBF124BF97160057CEE7 /* Notas_Diarias.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Notas_Diarias.xcdatamodel; sourceTree = "<group>"; };
 		6E0FEBF324BF97170057CEE7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6E0FEBF624BF97170057CEE7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6E0FEBF824BF97170057CEE7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6E5405A724C20FBB005E4774 /* ListarAnotacoesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListarAnotacoesTableViewController.swift; sourceTree = "<group>"; };
+		6E5405A924C21030005E4774 /* AnotacoesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnotacoesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,7 +84,8 @@
 		6E3C2DF824C134AB004FD780 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6E0FEBEB24BF97160057CEE7 /* ViewController.swift */,
+				6E5405A724C20FBB005E4774 /* ListarAnotacoesTableViewController.swift */,
+				6E5405A924C21030005E4774 /* AnotacoesViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -165,9 +168,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6E0FEBEC24BF97160057CEE7 /* ViewController.swift in Sources */,
 				6E0FEBE824BF97160057CEE7 /* AppDelegate.swift in Sources */,
 				6E0FEBEA24BF97160057CEE7 /* SceneDelegate.swift in Sources */,
+				6E5405A824C20FBB005E4774 /* ListarAnotacoesTableViewController.swift in Sources */,
+				6E5405AA24C21030005E4774 /* AnotacoesViewController.swift in Sources */,
 				6E0FEBF224BF97160057CEE7 /* Notas_Diarias.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -312,8 +316,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QXX4852TTD;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Notas Diarias/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -321,8 +326,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BrunoAlves.Notas-Diarias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -330,8 +336,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = QXX4852TTD;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Notas Diarias/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -339,8 +346,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "BrunoAlves.Notas-Diarias";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
